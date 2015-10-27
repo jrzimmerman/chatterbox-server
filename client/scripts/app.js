@@ -3,7 +3,8 @@ var app;
 
 $(function() {
   app = {
-    server: 'https://api.parse.com/1/classes/chatterbox',
+    //server: 'https://api.parse.com/1/classes/chatterbox',
+    server: 'http://127.0.0.1:3000/classes/messages',
     username: 'anonymous',
     room: 'lobby',
     friends: {},
@@ -80,7 +81,7 @@ $(function() {
         url: app.server,
         type: 'GET',
         contentType: 'application/json',
-        data: { order: '-createdAt' },
+        //data: { order: '-createdAt' },
         complete:function(){
           app.stopSpinner();
         },
